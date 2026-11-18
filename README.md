@@ -1,16 +1,20 @@
-# 櫻井 亮 ポートフォリオ (Ver5)
+# 櫻井 亮 Portfolio
 
-## 文字の書き換え
-index.html 上部の `const SITE = { ... }` の中だけ書き換えればOK。
+ゲームプログラマーを目指して制作したポートフォリオサイトです。
 
-## 画像・動画の置き場所
-- 動画: assets/videos/movie.mp4
-- ゲーム画像: assets/images/asumon.png, orange.png, fish.png, revolutuin.png
-- プロフィール画像: assets/images/profile.svg（差し替える場合は SITE.about.image も変更）
+Unity / C# を中心としたゲーム制作に取り組み、
+現在は C++ / DirectX 11 を使用したゲーム開発・ゲームエンジン制作について学んでいます。
 
-## 注意
-- GitHubは100MBを超えるファイルをアップロードできません。動画は50MB以下に圧縮してください。
-- ファイル名の大文字・小文字は SITE の記述と完全に一致させてください。
+## 制作内容
 
-## GitHub Pages
-リポジトリ名を「ユーザー名.github.io」にして push → Settings > Pages で main / root を選択
+- Unity / C# を使用したゲーム制作
+- チームでのゲーム開発
+- ネットワークゲームの制作
+- C++ / DirectX 11 を使用したゲーム制作
+- 自作ゲームエンジンの開発
+
+## Portfolio
+
+GitHub Pagesでポートフォリオサイトを公開しています。
+
+制作したゲームの紹介、プレイ動画、自己紹介、学歴・資格などを掲載しています。
