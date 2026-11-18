@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  <link rel="stylesheet" href="style.css">
+
+<script>
+/* =====================================================================
+   ★★★ 表示される文字はすべてここで書き換えられます ★★★
+   ・"" の中の文字を書き換えるだけでOK
+   ・項目を増やすときは { ... }, を1つコピーして追加
+   ・改行したいときは <br> と書く
+   ・行の先頭に全角スペースを入れないこと（ページが真っ白になります）
+   ===================================================================== */
+const SITE = {
+
+  // ---- ブラウザのタブに出る文字 ----
+  pageTitle: "櫻井 亮 ポートフォリオ | ゲームプログラマー志望",
+
+  // ---- 一番上のタイトル ----
+  top: {
+    sub:   "PORTFOLIO",
+    name:  "櫻井 亮",
+    text:  "Unity / DirectX11 を用いたゲーム開発",
+  },
+
+  // ---- 右上の目次 ----
+  toc: {
+    label: "CONTENTS",
+    items: ["制作ゲーム動画", "制作物一覧", "About"],
+  },
+
+  // ---- 動画セクション ----
+  showreel: {
+    title: "制作ゲーム動画",
+    video: "assets/videos/movie.mp4",   // 動画ファイル
+    desc:  "NintendoSwitchで2Dのゲームを制作しました。画面をタッチで遊ぶため手触りの良さの実現に力をいれました。",
+  },
+
+  // ---- 制作ゲーム ----
+  projects: {
+    title: "制作物一覧",
+    lead:  "制作したゲーム作品です。",
+    items: [
+      { image: "assets/images/asumon.png", title: "アスモン", tags: ["VisualStudio", "C"],
+        desc: "HEWという進級制作展のために制作、VisualStudioのコンソール画面で遊びます。" },
+      { image: "assets/images/orange.png", title: "GAME TITLE 02", tags: ["Unity", "チーム制作", "C#"],
+        desc: "2日程度のゲームジャムで作成。" },
+      { image: "assets/images/fish.png", title: "GAME TITLE 03", tags: ["Unity", "AI活用", "C#"],
+        desc: "AIがどの程度ゲーム制作に活用できるか、実験的に制作を行いました。" },
+      { image: "assets/images/revolutuin.png", title: "GAME TITLE 04", tags: ["Unity", "C#"],
+        desc: "HAL東京、HAL大阪、HAL名古屋の3校の合同コンテストのために制作しました。" },
+    ],
+  },
+
+  // ---- 自己紹介 ----
+  about: {
+    title:  "About",
+    image:  "assets/images/IMG_0179.jpg",   // プロフィール画像
+    name:   "櫻井 亮",
+    nameEn: "Ryo Sakurai",
+
+    introTitle: "自己紹介",
+    intro:      "人生はゲーム制作！！",
+
+    eduTitle: "学歴",
+    education: [
+      { date: "2021年4月",  text: "明治大学　政治経済学部経済学科 入学" },
+      { date: "2025年9月",  text: "明治大学　政治経済学部経済学科 卒業" },
+      { date: "2025年10月", text: "HAL東京　ゲーム学科 入学" },
+      { date: "2029年3月",  text: "HAL東京　ゲーム学科 卒業予定" },
+    ],
+
+    licenseTitle: "資格",
+    licenses: [
+      { date: "・", text: "基本情報技術者試験" },
+      { date: "・", text: "CGエンジニア検定エキスパート" },
+      { date: "・", text: "映像音響処理技術者試験" },
+    ],
+
+    futureTitle: "今後挑戦したい分野",
+    future:      "DirectXを活用したゲーム制作。",
+
+    contactTitle: "連絡先",
+    email:        "ryowork2029@gmail.com",
+  },
+
+  // ---- 一番下 ----
+  footer: {
+    copyright: "© 2026 Ryo Sakurai",
+    toTop:     "▲ TOP",
+  },
+};
+/* ===================== ★ここまで★ ===================== */
+</script>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
+  <header class="top" id="top">
+    <div class="top-title fade">
+      <p class="hero-sub" data-t="top.sub"></p>
+      <h1 class="hero-title" data-t="top.name"></h1>
+      <p class="hero-text" data-t="top.text"></p>
+    </div>
+    <nav class="toc fade">
+      <p class="toc-label" data-t="toc.label"></p>
+      <a href="#showreel"><span>01</span><b data-t="toc.items.0"></b></a>
+      <a href="#projects"><span>02</span><b data-t="toc.items.1"></b></a>
+      <a href="#about"><span>03</span><b data-t="toc.items.2"></b></a>
+    </nav>
+  </header>
+
+  <section class="section" id="showreel">
+    <h2 class="section-title fade" data-t="showreel.title"></h2>
+    <div class="video-wrap fade">
+      <video class="hero-video" id="video" controls playsinline poster="assets/images/video-poster.svg"></video>
+    </div>
+    <div class="desc fade"><p data-t="showreel.desc"></p></div>
+  </section>
+
+  <section class="section" id="projects">
+    <h2 class="section-title fade" data-t="projects.title"></h2>
+    <p class="section-lead fade" data-t="projects.lead"></p>
+    <div class="project-grid" id="projectGrid"></div>
+  </section>
+
+  <section class="section" id="about">
+    <h2 class="section-title fade" data-t="about.title"></h2>
+    <div class="about-card fade">
+      <div class="about-head">
+        <img class="avatar" id="avatar" alt="プロフィール画像">
+        <div>
+          <h3 class="about-name" data-t="about.name"></h3>
+          <p class="about-en" data-t="about.nameEn"></p>
+        </div>
+      </div>
+      <div class="about-block"><h4 data-t="about.introTitle"></h4><p data-t="about.intro"></p></div>
+      <div class="about-block"><h4 data-t="about.eduTitle"></h4><ul class="timeline" id="eduList"></ul></div>
+      <div class="about-block"><h4 data-t="about.licenseTitle"></h4><ul class="timeline" id="licList"></ul></div>
+      <div class="about-block"><h4 data-t="about.futureTitle"></h4><p data-t="about.future"></p></div>
+      <div class="about-block"><h4 data-t="about.contactTitle"></h4><p><a class="mail" id="mail"></a></p></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p data-t="footer.copyright"></p>
+    <a href="#top" class="to-top" data-t="footer.toTop"></a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
